@@ -5,7 +5,7 @@ import classes from './MainMenu.css';
 class MainMenu extends Component {
     render() {
         return (
-            <nav class={classes.MainMenu}>Main Menu</nav>
+            <nav className={classes.MainMenu}>Main Menu</nav>
         )
     }
 }

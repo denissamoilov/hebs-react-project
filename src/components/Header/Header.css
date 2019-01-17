@@ -1,7 +1,16 @@
 .Header {
     background: #000;
+    height: 60px;
+    padding: 20px 50px;
+    position: relative;
 }
 
-.Logo {
-    width: 200px;
+.logo {
+    display: block;
+    width: 250px;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
 }
