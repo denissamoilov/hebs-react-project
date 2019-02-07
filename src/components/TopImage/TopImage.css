@@ -1,0 +1,32 @@
+.TopImage {
+    background: #eee;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.TopImage figure {
+    background-size: cover;
+    background-position: 50% 50%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 150px 50px 100px;
+    position: relative;
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 36px;
+}
+
+.TopImage figcaption {
+    background-color: rgba(255,255,255,.2);
+    padding: 50px;
+}
+
+.TopImage img {
+    display: none;
+}

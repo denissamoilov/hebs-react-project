@@ -1,0 +1,8 @@
+.MainWrapper {
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto;
+    min-width: 320px;
+    padding: 0 50px;
+    position: relative;
+}

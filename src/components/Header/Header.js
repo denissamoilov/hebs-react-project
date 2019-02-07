@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import logo from '../../assets/images/logo.svg';
 import classes from './Header.css';
-import Navigation from '../../components/Menu/Navigation';
+import Navigation from '../Navigation/Navigation';
 
 class Header extends Component {
 
@@ -12,9 +12,9 @@ class Header extends Component {
 
     render() {
         return (
-            <header className={classes.Header}>
+            <header className={`${classes.Header} ${this.state.sticky ? classes.Sticky : ''}`}>
                 <img className={classes.logo} src={logo} alt="" />
-                <Navigation />
+                <Navigation className='main-menu' />
             </header>
         )
     }
