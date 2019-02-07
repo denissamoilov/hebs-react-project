@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import logo from '../../assets/images/logo.svg';
 import classes from './Header.css';
-import Navigation from '../Menu/Navigation';
+import Navigation from '../../components/Menu/Navigation';
 
 class Header extends Component {
 

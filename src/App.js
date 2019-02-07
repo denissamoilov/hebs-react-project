@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import Layout from './components/Layout/Layout';
-import Header from './components/Header/Header';
+import Layout from './containers/Layout/Layout';
+import Header from './containers/Header/Header';
 
 class App extends Component {
     render() {
         return (
             <>
                 <Header />
-                <Layout />
+                {/* <Layout /> */}
             </>
         );
     }
