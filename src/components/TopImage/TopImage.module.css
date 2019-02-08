@@ -1,6 +1,7 @@
 .TopImage {
     background: #eee;
     height: 100vh;
+    overflow: hidden;
     position: relative;
     width: 100%;
 }
@@ -23,7 +24,7 @@
 }
 
 .TopImage figcaption {
-    background-color: rgba(255,255,255,.2);
+    background-color: rgba(53, 39, 33, 0.7);
     padding: 50px;
 }
 
