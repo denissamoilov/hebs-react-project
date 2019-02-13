@@ -1,15 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import axios from '../../axios';
 
-import classes from './Content.module.css';
+import classes from './Content.module.scss';
 import MainWrapper from '../MainWrapper/MainWrapper';
 
-class Content extends Component {
-    
-    state = {
-        hasSidebar: false,
-        error: false
-    }
+const Content = (props) => {
 
     // componentDidMount() {
         
@@ -28,19 +23,17 @@ class Content extends Component {
     //     });
     // }
 
-    render() {
+    const subTitle = (props.pageContent.subTitle !== '') ? `<h2>${props.pageContent.subTitle}</h2` : null;
 
-        return (
-            <main className={classes.Content}>
-                <MainWrapper key={this.props.pageId}>
-                    <h1>{this.props.pageContent.title}</h1>
-                    <h2>{this.props.pageContent.subTitle}</h2>
-
-                    <div dangerouslySetInnerHTML={ { __html: this.props.pageContent.copy } } />
-                </MainWrapper>
-            </main>
-        )
-    }
+    return (
+        <main className={classes.Content}>
+            <MainWrapper key={props.pageId}>
+                <h1>{props.pageContent.title}</h1>
+                {subTitle}
+                <div dangerouslySetInnerHTML={ { __html: props.pageContent.copy } } />
+            </MainWrapper>
+        </main>
+    )
 }
 
 export default Content;

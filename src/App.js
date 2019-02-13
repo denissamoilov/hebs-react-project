@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import './assets/global-css/swiper.min.css';
 import axios from './axios';
+
+import './assets/global-css/reset.css';
+import './assets/global-css/slick.min.css';
 
 // import Layout from './containers/Layout/Layout';
 import Header from './components/Header/Header';
@@ -25,6 +27,7 @@ class App extends Component {
             error: false
         },
         topImages: [],
+        promoTiles: [],
         menuLoaded: false,
         level: 'corporate',
         sticky: false,
@@ -86,8 +89,21 @@ class App extends Component {
             this.setState({ pageData: {error: true } });
         });
 
-    }
+        // LOAD PROMOTILES
 
+        axios.get(`json/featured.json`).then(response => {
+            
+            const data = response.data.data;
+
+            this.setState({
+                promoTiles: data
+            });
+            
+        }).catch(error => {
+            this.setState({ pageData: {error: true } });
+        });
+
+    }
 
     render() {
 

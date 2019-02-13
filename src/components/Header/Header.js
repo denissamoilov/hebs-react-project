@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import axios from '../../axios';
 
 import logo from '../../assets/images/logo.svg';
-import classes from './Header.module.css';
+import classes from './Header.module.scss';
 import Navigation from '../Navigation/Navigation';
 
 class Header extends Component {

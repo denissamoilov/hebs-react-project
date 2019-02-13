@@ -1,0 +1,44 @@
+.TopImage {
+    background: #eee;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    
+
+    figure {
+        background-size: cover;
+        background-position: 50% 50%;
+        box-sizing: border-box;
+        height: 100%;
+        display: flex;
+        margin: 0;
+        padding: 150px 50px 100px;
+        position: relative;
+        width: 100%;
+    
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 36px;
+    }
+
+    figcaption {
+        background-color: rgba(53, 39, 33, 0.7);
+        padding: 50px;
+    }
+
+    img {
+        display: none;
+    }
+
+    .SlickSlider {
+        height: 100%;
+    }
+
+    .SlickButton {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+    }
+}

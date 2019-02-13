@@ -1,13 +1,13 @@
 import React from 'react';
 
-import classes from './Footer.module.css';
+import classes from './Footer.module.scss';
 import MainWrapper from '../MainWrapper/MainWrapper';
 import Navigation from '../Navigation/Navigation';
 
 const footer = (props) => (
     <footer className={classes.Footer}>
         <MainWrapper>
-            <Navigation className='FooterMenu' menu={props.footerMenu} />
+            <Navigation className='footer-menu' menu={props.footerMenu} />
         </MainWrapper>
     </footer>
 )

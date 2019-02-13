@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import classes from './Navigation.module.css';
+import classes from './Navigation.module.scss';
 import NavigationItem from './NavigationItem/NavigationItem';
 
 class Navigation extends Component {
@@ -12,7 +12,7 @@ class Navigation extends Component {
         if(this.props.menu !== undefined) {
             menuLinks = this.props.menu.map(item => {
                 // console.log('link: ', item);
-                return <NavigationItem key={item.id} href={item.slug} active>{item.name}</NavigationItem>
+                return <NavigationItem key={item.id} href={item.slug}>{item.name}</NavigationItem>
             });
         }
         

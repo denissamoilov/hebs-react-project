@@ -1,48 +1,47 @@
 import React from 'react';
-import Swiper from 'react-id-swiper';
+import Slider from "react-slick";
 
-import photo from '../../assets/images/photo.jpg';
-import classes from './TopImage.module.css';
+import * as Button from '../UI/Button/Button';
+import classes from './TopImage.module.scss';
 
-const topImage = (props) => {
+const TopImage = (props) => {
 
-    console.log('props: ', props);
+    let images = props.images.map( (image, key) => {
 
-    let images = <figure style={{backgroundImage: `url(${photo})`}}>
-                    <img src={photo} alt="" />
-                    <figcaption>Commodo Vestibulum Sem</figcaption>
-                </figure>;
+        const caption = (image.title !== '') ? <figcaption>{image.title}</figcaption> : null;
 
-    images = props.images.map( (image, key) => {
         return (
-            <figure key={key} style={{backgroundImage: `url(${image.path})`}}>
-                <img src={image.path} alt="" />
-                <figcaption>{image.title}</figcaption>
-            </figure>
+                <div key={key}>
+                    <figure style={{backgroundImage: `url(${image.path})`}}>
+                        <img src={image.path} alt="" />
+                        {caption}
+                    </figure>
+                </div>
         );
     });
 
-    const params = {
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
+    var settings = {
+        customPaging: function(i) {
+            return (
+                <Button.SliderDot text={`Photo ${i}`} />
+            );
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        },
-            spaceBetween: 30
-        };
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow: <Button.ArrowRight text="Next Photo" />,
+        prevArrow: <Button.ArrowLeft text="Previous Photo" />
+    };
 
     return (
         <div className={classes.TopImage}>
-            <Swiper {...params} >
+            <Slider className={classes.SlickSlider} {...settings}>
                 {images}
-            </Swiper>
+            </Slider>
         </div>
     )
 }
 
-export default topImage;
+export default TopImage;

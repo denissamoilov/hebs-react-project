@@ -1,0 +1,84 @@
+.Button {
+    background-color: red;
+}
+
+.arrow-left,
+.arrow-right {
+    background: none;
+    border: 2px solid #fff;
+    border-bottom: 0;
+    border-left: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: border-color 250ms ease-in-out;
+    overflow: hidden;
+    text-indent: -100em;
+    z-index: 50;
+
+    &:hover {
+        border-color: #DBA63D;
+    }
+
+    &.small {
+        height: 24px;
+        width: 24px;
+    }
+
+    &.medium {
+        height: 32px;
+        width: 32px;
+    }
+
+    &.big {
+        height: 48px;
+        width: 48px;
+    }
+}
+
+.arrow-left {
+    left: 50px;
+    transform: rotate(-135deg);
+}
+
+.arrow-right {
+    right: 50px;
+    transform: rotate(45deg);
+}
+
+// SLIDER PAGINATION DOT
+
+.slider-dot {
+    background: none;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    margin: 0 5px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -100em;
+    transition: background-color 250ms ease-in-out;
+
+    &.small {
+        height: 8px;
+        width: 8px;
+    }
+
+    &.medium {
+        height: 12px;
+        width: 12px;
+    }
+
+    &.big {
+        height: 16px;
+        width: 16px;
+    }
+
+    &:hover,
+    .slick-active & {
+        background: #fff;
+    }
+}
