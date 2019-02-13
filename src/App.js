@@ -55,22 +55,6 @@ class App extends Component {
             this.setState({ menu: {error: true } });
         });
 
-        // LOAD TOP IMAGES
-
-        axios.get('/?format=json').then(response => {
-
-            const data = response.data;
-
-            this.setState({
-                topImages: data.top_images
-            });
-
-        }).catch(error => {
-            this.setState({
-                error: true
-            });
-        });
-
         // LOAD CONTENT
 
         axios.get(`json/content.json?id=${this.state.currentPageId}`).then(response => {
