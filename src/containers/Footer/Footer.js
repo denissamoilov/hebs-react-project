@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './Footer.module.scss';
 import MainWrapper from '../MainWrapper/MainWrapper';
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../../components/Navigation/Navigation';
 
 const footer = (props) => (
     <footer className={classes.Footer}>

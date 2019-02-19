@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import axios from './axios';
 
 import './assets/global-css/reset.css';
 import './assets/global-css/slick.min.css';
 
 // import Layout from './containers/Layout/Layout';
-import Header from './components/Header/Header';
-import TopImage from './components/TopImage/TopImage';
-import Content from './components/Content/Content';
-import Footer from './components/Footer/Footer';
+import Header from './containers/Header/Header';
+import TopImages from './containers/TopImages/TopImages';
+import Content from './containers/Content/Content';
+import Footer from './containers/Footer/Footer';
 
 class App extends Component {
 
@@ -91,21 +92,23 @@ class App extends Component {
 
     render() {
 
-        let content = <p style={{textAlign: 'center'}}>Loading Content...</p>
+        // let content = <p style={{textAlign: 'center'}}>Loading Content...</p>
 
-        if (this.state.pageData.title.length !== 0 ) {
-            content = <Content pageId={this.state.currentPageId} pageContent={this.state.pageData} />;
-        }
+        // if (this.state.pageData.title.length !== 0 ) {
+        //     content = <Content pageId={this.state.currentPageId} pageContent={this.state.pageData} />;
+        // }
 
         return (
-            <>
-                <Header mainMenu={this.state.menu.main} topMenu={this.state.menu.top} />
-                <TopImage images={this.state.topImages} />
-                {content}
-                {/* <Content pageId={this.state.currentPageId} pageContent={this.state.pageData} /> */}
-                <Footer footerMenu={this.state.menu.footer} />
-                {/* <Layout /> */}
-            </>
+            <BrowserRouter>
+                <>
+                    <Header mainMenu={this.state.menu.main} topMenu={this.state.menu.top} />
+                    <TopImages />
+                    {/* {content} */}
+                    {/* <Content pageId={this.state.currentPageId} pageContent={this.state.pageData} /> */}
+                    <Footer footerMenu={this.state.menu.footer} />
+                    {/* <Layout /> */}
+                </>
+            </BrowserRouter>
         );
     }
 }

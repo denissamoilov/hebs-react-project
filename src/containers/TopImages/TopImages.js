@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import axios from '../../axios';
 import Slider from "react-slick";
+import axios from '../../axios';
 
-import * as Button from '../UI/Button/Button';
-import classes from './TopImage.module.scss';
+import * as Button from '../../components/UI/Button/Button';
+import classes from './TopImages.module.scss';
 
 class TopImage extends Component {
 
     state = {
-        images: []
+        images: [],
+        error: false
     }
 
     // LOAD TOP IMAGES
     componentWillMount () {
         axios.get('/?format=json').then(response => {
+
+            console.log('response: ', response)
 
             const data = response.data;
 
