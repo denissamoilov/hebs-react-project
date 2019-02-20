@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import logo from '../../assets/images/logo.svg';
 import classes from './Header.module.scss';
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../../components/Navigation/Navigation';
 
 class Header extends Component {
 

@@ -17,6 +17,11 @@
         display: block;
         color: #fff;
         text-decoration: none;
+
+        &:hover,
+        &.active {
+            text-decoration: underline;
+        }
     }
 }
 
